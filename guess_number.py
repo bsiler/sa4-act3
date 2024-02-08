@@ -8,6 +8,10 @@ while guess != str(number):
     if guess == 'q' or guesses_left == 0:
         print(f"Sorry! The number was {number}.")
         exit()
+    elif int(guess) > number:
+        print(f"Too high!")
+    else:
+        print(f"Too low!")
     print(f"You have " + str(guesses_left) + " guess(es) remaining.")
     guess = input("Try again: ")
     guesses_left -= 1
